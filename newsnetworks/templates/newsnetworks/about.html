@@ -1,27 +1,36 @@
 {% extends 'newsnetworks/base.html' %}
 {% load staticfiles %}
-
-{% block nav-about %} active {% endblock %}
-
-{% block main %}
+{% block nav-about %} active {% endblock %} {% block main %}
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10">
   <div class="text-center my-3">
-    <!-- <img src="{% static 'images/overview.png' %}" class="img-thumbnail w-75"> -->
-    <img src="/home/demos/Django/front/newsnetworks/static/images/overview.png" class="img-thumbnail w-75">
+    <img src="{% static 'images/overview.png' %}" class="img-thumbnail w-75">
+    <!-- <img src="http://genax.tools:8000/static/images/overview.png" class="img-thumbnail w-75"> -->
   </div>
 
   <div class="card my-3 mx-5">
     <div class='card-body'>
       <div>
-        <h5 class='text-center mb-3'><dt>뉴스정보원연결망 (News Source Networks, NSN)</dt></h5>
-        <p>뉴스정보원연결망(News Source Networks, NSN)이란 관심있는 뉴스 집합에서 동시에 뉴스에 등장한 정보원들을 연결한 네트워크로서, 해당 키워드의 중심 인물 또는 단체 등의 정보원을 시각적으로 확인할 수 있고 주변 정보원들을 네트워크로 연결하여 인물 또는 단체와의 관계를 확인할 수 있음</p>
+        <h5 class='text-center mb-3'>
+          <dt>뉴스정보원연결망 (News Source Networks, NSN)</dt>
+        </h5>
+        <div class="d-flex flex-column mb-3">
+          <span>제작자: 박진욱, 김민재, 조윤준</span>
+          <span>email: parkju536@yonsei.ac.kr</span>
+        </div>
+        <p>뉴스정보원연결망(News Source Networks, NSN)이란 관심있는 뉴스 집합에서 동시에 뉴스에 등장한 정보원들을 연결한 네트워크로서, 해당 키워드의 중심 인물 또는 단체 등의 정보원을 시각적으로
+          확인할 수 있고 주변 정보원들을 네트워크로 연결하여 인물 또는 단체와의 관계를 확인할 수 있음</p>
         <p>여기서 한 뉴스의 정보원이란, 해당 뉴스의 원천(Source)이 되는 정보를 발언한 인물 또는 단체를 일컫고, 이때의 주요 정보는 따옴표(“”)를 기준으로 기사에 나타난 인용문으로 정의함</p>
-        <p>또한 뉴스의 주요 정보인 인용문의 감정을 분석(Sentiment Analysis)하여 해당 키워드에 대한 정보원의 입장 또는 극성(긍정, 중립, 부정)을 결정 짓고, 뉴스정보원연결망을 통해 정보원들의 극성을 시각적으로 표현함</p>
-        <p>한 정보원의 한 키워드에 대한 극성을 결정하는 방법은, 해당 정보원이 특정 키워드에 대해 발언한 문장의 모든 감정 분석 결과 중 개수가 많은 극성으로 결정 지으며, 이때 가장 강한 극성을 나타내는 문장을 “가장 극단적인 발언”이라고 간주하여 해당 정보원을 대표하는 문장으로 추출하여 요약함</p>
+        <p>또한 뉴스의 주요 정보인 인용문의 감정을 분석(Sentiment Analysis)하여 해당 키워드에 대한 정보원의 입장 또는 극성(긍정, 중립, 부정)을 결정 짓고, 뉴스정보원연결망을 통해 정보원들의 극성을
+          시각적으로 표현함</p>
+        <p>한 정보원의 한 키워드에 대한 극성을 결정하는 방법은, 해당 정보원이 특정 키워드에 대해 발언한 문장의 모든 감정 분석 결과 중 개수가 많은 극성으로 결정 지으며, 이때 가장 강한 극성을 나타내는 문장을
+          “가장 극단적인 발언”이라고 간주하여 해당 정보원을 대표하는 문장으로 추출하여 요약함</p>
       </div>
 
-      <div class="mt-5">  <!-- must have 'mt-5' in second division for enough spacing in margin top-->
-        <h5 class='text-center mb-3'><dt>프로젝트 개요 (Project Overveiw)</dt></h5>
+      <div class="mt-5">
+        <!-- must have 'mt-5' in second division for enough spacing in margin top-->
+        <h5 class='text-center mb-3'>
+          <dt>프로젝트 개요 (Project Overveiw)</dt>
+        </h5>
         <p>뉴스정보원연결망 프로젝트는 크게 데이터 수집, 정보원 및 인용문 추출, 인용문에 대한 감정 분석, 네트워크 구축으로 나뉨</p>
         <p>1. 데이터 수집</p>
         <ul>
@@ -61,4 +70,3 @@
   </div>
 </main>
 {% endblock %}
-

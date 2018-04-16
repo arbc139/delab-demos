@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '^$p-kj78x=dv*yv!nwz%=(vmwh49hm1-%pae%*7(i@rsox4^)a'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['165.132.106.71', 'genax.tools']
 
@@ -123,7 +123,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'http://genax.tools:8000/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'newsnetworks/static'),
+    os.path.join(BASE_DIR, 'drgsreviews/static'),
+    os.path.join(BASE_DIR, 'mvreviews/static'),
+    os.path.join(BASE_DIR, 'generation/static'),
+]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 CSRF_COOKIE_SECURE = True

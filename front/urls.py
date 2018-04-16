@@ -20,9 +20,9 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     
 
-    url('biapi/newsnetworks/', include('newsnetworks.urls')),
-    url('biapi/mvreviews/', include('mvreviews.urls')),
-    url('biapi/generation/', include('generation.urls')),
-    url('biapi/drgsreviews/', include('drgsreviews.urls')),
-	url('biapi/', include('home.urls')),
+    url('demos/newsnetworks/', include('newsnetworks.urls')),
+    url('demos/mvreviews/', include('mvreviews.urls')),
+    url('demos/generation/', include('generation.urls')),
+    url('demos/drgsreviews/', include('drgsreviews.urls')),
+	url('demos/', include('home.urls')),
 ]
